@@ -110,10 +110,12 @@ function getLinearEquationRoot(a, b) {
  *   (0,-1) (1,0)    => π/2
  *   (0,1) (0,1)     => 0
  */
-function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
-  throw new Error('Not implemented');
+function getAngleBetweenVectors(x1, y1, x2, y2) {
+  const a = Math.sqrt(Math.abs(x1) ** 2 + Math.abs(y1) ** 2);
+  const b = Math.sqrt(Math.abs(x2) ** 2 + Math.abs(y2) ** 2);
+  const ab = Math.abs(x1) * Math.abs(y1) + Math.abs(x2) * Math.abs(y2);
+  return ab / (a * b);
 }
-
 /**
  * Returns a last digit of a integer number.
  * The input parameter will always be greater than or equal to zero and will be in decimal notation.
