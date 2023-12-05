@@ -111,10 +111,10 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (0,1)     => 0
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
-  const a = Math.sqrt(Math.abs(x1) ** 2 + Math.abs(y1) ** 2);
-  const b = Math.sqrt(Math.abs(x2) ** 2 + Math.abs(y2) ** 2);
-  const ab = Math.abs(x1) * Math.abs(y1) + Math.abs(x2) * Math.abs(y2);
-  return ab / (a * b);
+  const a = Math.sqrt(x1 ** 2 + y1 ** 2);
+  const b = Math.sqrt(x2 ** 2 + y2 ** 2);
+  const ab = x1 * x2 + y1 * y2;
+  return Math.acos(ab / (a * b));
 }
 /**
  * Returns a last digit of a integer number.
