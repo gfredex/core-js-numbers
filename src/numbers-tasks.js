@@ -243,13 +243,12 @@ function toNumber(value, def) {
  *   -2 => -8
  *   0  => 0
  */
-function getCube(/* num */) {
-  throw new Error('Not implemented');
+function getCube(num) {
+  return num ** 3;
 }
 
 /**
  * Returns the Fibonacci number located at the index position.
- *
  * @param {number} index
  * @return {number}
  *
